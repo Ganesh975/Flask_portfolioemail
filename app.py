@@ -71,9 +71,7 @@ def send_email(subject, body, to_email):
     except Exception as e:
         print(f'Failed to send email. Error: {str(e)}')
 
-@app.route('/')
-def index():
-    return render_template('contact.html')
+
 
 @app.route('/send_email', methods=['POST'])
 def handle_contact_form():
